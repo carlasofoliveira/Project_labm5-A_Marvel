@@ -1,101 +1,45 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  width: 100vw;
+html {
+	box-sizing: border-box;
 }
 
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  width: 40vw;
-  text-align: center;
-  box-shadow: 6px 6px 6px gray;
-  background: white;
+*, *::before, *::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 10px;
 }
 
-.navbar {
-  display: flex;
-  box-shadow: 4px 4px 6px gray;
-  justify-content: space-between;
+.app {
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
-.game {
-  display: flex;
-  height: 85vh;
-  justify-content: center;
-  align-items: center;
+nav ul {
+	list-style: none;
+	display: flex;
+	background-color: black;
+	margin-bottom: 100px;
+	margin-top: -200px;
 }
 
-.images {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 450px;
-  width: 570px;
-  box-shadow: 4px 4px 10px gray;
+nav ul li {
+	padding: 20px;
 }
 
-.image {
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  height: 120px;
-  width: 120px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 3px black;
-  padding: 10px;
-  margin: 10px;
+nav ul li a {
+	color: white;
+	text-decoration: none;
 }
 
-.image-blank {
-  background: url("./Components/Images/onepiece.png") !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  height: 120px;
-  width: 120px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 3px black;
-  padding: 10px;
-  margin: 10px;
+.current {
+	border-bottom: 4px solid white;
 }
 
-.end-game {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+h1 {
+	margin-bottom: 20px;
 }
 
-.message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  width: 40vw;
-  background: white;
-  box-shadow: 12px 12px 10px gray;
+p {
+	margin-bottom: 15px;
 }
 
-@media only screen and (max-width: 600px) {
-  .image {
-    height: 100px;
-    width: 110px;
-    margin: 5px;
-  }
-  .message {
-    width: 400px;
-  }
-  .login {
-    width: 400px;
-  }
-}
