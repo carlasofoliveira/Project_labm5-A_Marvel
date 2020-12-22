@@ -23,7 +23,7 @@ class Search extends React.Component {
                     <label> Search</label>
                     <input value={this.state.title}
                            onChange={this.onSearchChanged} id="video-search" type="text"
-                           placeholder="Enter Search Keyword"/><button type="submit"> Search </button>
+                           placeholder="Enter Search Keyword"/><button type="submit" > Search </button>
                 </form>
             </div>
         )
