@@ -5,7 +5,7 @@ import youtubeApi from "./api/youtube";
 import VideoList from "./Components/VideoList";
 import Videoplayer from "./Components/VideoPlayer";
 
-
+//Estrutura de código construído com base em tutorial
 class YouTubeMenu extends React.Component {
     state = {
         videoMetaInfo: [],

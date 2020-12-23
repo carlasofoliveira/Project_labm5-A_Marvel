@@ -1,7 +1,6 @@
 import React from "react";
-
 import Video from "./Video";
-
+//Estrutura de código construído com base em tutorial
 const VideoList = ({ data, onVideoSelected }) => {
     return (
         <div className="video-list">

@@ -83,3 +83,5 @@ export let images = [
 ];
 
 export const blankCard = onePiece;
+export default class Images {
+}
