@@ -1,13 +1,25 @@
-import React from "react";
+import React from 'react';
+import './App.css';
+import "./App_game.css";
+import Menunav from "./Menu_nav";
+import YouTubeMenu from "./Youtube_menu";
 import Main from "./Components/Main";
-import "./App.css";
+
+//import logo_marvel from 'logo_marvel.png';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <Main />
-    </div>
-  );
+	return (
+		<Router>
+			<div className="App">
+				<Menunav />
+				<Switch>
+					<Route path="/Main" component={Main} />
+					<Route path="/Youtube_menu" component={YouTubeMenu}/>
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 
 export default App;

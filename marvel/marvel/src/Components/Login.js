@@ -1,5 +1,6 @@
 import React from "react";
 
+//Estrutura de código construído com base em tutorial
 class Login extends React.Component {
   state = {};
 
