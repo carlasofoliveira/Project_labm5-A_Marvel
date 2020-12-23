@@ -1,0 +1,58 @@
+html {
+
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 10px;
+}
+
+.app {
+	width: 960px;
+	margin-left: 0%;
+	margin-top: 2px;
+	padding: 0px;
+}
+nav div{
+	color:white;
+
+}
+nav ul {
+	color:white;
+	list-style: none;
+	display: flex;
+	background-color: black;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+nav ul li {
+color:white;
+	padding:0px;
+}
+
+nav ul li a {
+
+	color: white;
+	text-decoration: none;
+}
+
+.current {
+	border-bottom: 4px solid white;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+p {
+	color: white;
+	margin-bottom: 15px;
+}
+
+li{
+	font-size: 20px;
+}
