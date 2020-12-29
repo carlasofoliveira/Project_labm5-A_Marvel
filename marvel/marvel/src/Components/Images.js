@@ -1,7 +1,59 @@
 import React from "react";
-import { images } from "./Images/index";
+import axios from "axios";
 
 class Images extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { isLoading: true, images: undefined };
+	}
+
+	componentDidMount() {
+		console.debug("After mount! Let's load data from API...");
+		axios.get("http://gateway.marvel.com/v1/public/characters?apikey=bd8a67a15563a7425a69aedc11c376e8").then(response => {
+			console.log(response);
+			let images = [
+				{name: "Luffy",
+					pic: response.data.data.results[14].thumbnail.path + '/portrait_small.' + response.data.data.results[14].thumbnail.extension,
+					flipped: false,},
+				{name: "Sanji",
+					pic: response.data.data.results[19].thumbnail.path + '/portrait_small.' + response.data.data.results[19].thumbnail.extension,
+					flipped: false,},
+				{name: "Usopp",
+					pic: response.data.data.results[1].thumbnail.path + '/portrait_small.' + response.data.data.results[1].thumbnail.extension,
+					flipped: false,},
+				{name: "Zorro",
+					pic: response.data.data.results[4].thumbnail.path + '/portrait_small.' + response.data.data.results[4].thumbnail.extension,
+					flipped: false,},
+				{name: "Nami",
+					pic: response.data.data.results[6].thumbnail.path + '/portrait_small.' + response.data.data.results[6].thumbnail.extension,
+					flipped: false,},
+				{name: "Brooks",
+					pic: response.data.data.results[7].thumbnail.path + '/portrait_small.' + response.data.data.results[7].thumbnail.extension,
+					flipped: false,},
+				{name: "Luffy",
+					pic: response.data.data.results[14].thumbnail.path + '/portrait_small.' + response.data.data.results[14].thumbnail.extension,
+					flipped: false,},
+				{name: "Sanji",
+					pic: response.data.data.results[19].thumbnail.path + '/portrait_small.' + response.data.data.results[19].thumbnail.extension,
+					flipped: false,},
+				{name: "Usopp",
+					pic: response.data.data.results[1].thumbnail.path + '/portrait_small.' + response.data.data.results[1].thumbnail.extension,
+					flipped: false,},
+				{name: "Zorro",
+					pic: response.data.data.results[4].thumbnail.path + '/portrait_small.' + response.data.data.results[4].thumbnail.extension,
+					flipped: false,},
+				{name: "Nami",
+					pic: response.data.data.results[6].thumbnail.path + '/portrait_small.' + response.data.data.results[6].thumbnail.extension,
+					flipped: false,},
+				{name: "Brooks",
+					pic: response.data.data.results[7].thumbnail.path + '/portrait_small.' + response.data.data.results[7].thumbnail.extension,
+					flipped: false,},
+			];
+			this.setState({ images: images });
+			this.setState({ isLoading: false });
+		});
+	}
+
 	characters = [];
 	handleClick = (event) => {
 		let character = event.target;
@@ -58,7 +110,14 @@ class Images extends React.Component {
 			target.classList.remove("image-blank");
 		}
 	};
+
 	render() {
+		const { isLoading, images } = this.state;
+
+		if (isLoading) {
+			return <div className="App">Loading...</div>;
+		}
+
 		return (
 			<div className="images">
 				{images

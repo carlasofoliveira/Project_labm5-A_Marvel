@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
 import "./App_game.css";
+import './Charcters.css';
 import Menunav from "./Menu_nav";
 import YouTubeMenu from "./Youtube_menu";
 import Main from "./Components/Main";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Characterscards from "./Components/Characters";
+
 
 //import logo_marvel from 'logo_marvel.png';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
 	return (
@@ -16,6 +20,7 @@ function App() {
 				<Switch>
 					<Route path="/Main" component={Main} />
 					<Route path="/Youtube_menu" component={YouTubeMenu}/>
+					<Route path="/Characters" component={Characterscards}/>
 				</Switch>
 			</div>
 		</Router>

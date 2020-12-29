@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Jogo extends React.Component {
 	constructor(props)
 	{
-		super (props)
+		super (props);
 		console.log("Jogo")
 	}
 	render(){
