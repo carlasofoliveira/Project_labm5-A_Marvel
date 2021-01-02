@@ -6,7 +6,7 @@ const VideoList = ({ data, onVideoSelected }) => {
         <div className="video-list">
             <div style={{ padding: "20px 0" }}>
                 <h3
-                    style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold" }}
+                    style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold", color:"White" }}
                 >
                     Videos List
                 </h3>

@@ -31,4 +31,4 @@ class Jogo extends React.Component {
 	}
 }
 
-export default Events;
+export default Jogo;

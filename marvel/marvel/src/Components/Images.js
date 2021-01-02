@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+//Estrutura de código construído com base em tutorial
 class Images extends React.Component {
 	constructor(props) {
 		super(props);
@@ -12,40 +12,40 @@ class Images extends React.Component {
 		axios.get("http://gateway.marvel.com/v1/public/characters?apikey=bd8a67a15563a7425a69aedc11c376e8").then(response => {
 			console.log(response);
 			let images = [
-				{name: "Luffy",
+				{name: response.data.data.results[14].name,
 					pic: response.data.data.results[14].thumbnail.path + '/portrait_small.' + response.data.data.results[14].thumbnail.extension,
 					flipped: false,},
-				{name: "Sanji",
+				{name: response.data.data.results[19].name,
 					pic: response.data.data.results[19].thumbnail.path + '/portrait_small.' + response.data.data.results[19].thumbnail.extension,
 					flipped: false,},
-				{name: "Usopp",
+				{name: response.data.data.results[1].name,
 					pic: response.data.data.results[1].thumbnail.path + '/portrait_small.' + response.data.data.results[1].thumbnail.extension,
 					flipped: false,},
-				{name: "Zorro",
+				{name: response.data.data.results[4].name,
 					pic: response.data.data.results[4].thumbnail.path + '/portrait_small.' + response.data.data.results[4].thumbnail.extension,
 					flipped: false,},
-				{name: "Nami",
+				{name: response.data.data.results[6].name,
 					pic: response.data.data.results[6].thumbnail.path + '/portrait_small.' + response.data.data.results[6].thumbnail.extension,
 					flipped: false,},
-				{name: "Brooks",
+				{name:response.data.data.results[7].name,
 					pic: response.data.data.results[7].thumbnail.path + '/portrait_small.' + response.data.data.results[7].thumbnail.extension,
 					flipped: false,},
-				{name: "Luffy",
+				{name: response.data.data.results[14].name,
 					pic: response.data.data.results[14].thumbnail.path + '/portrait_small.' + response.data.data.results[14].thumbnail.extension,
 					flipped: false,},
-				{name: "Sanji",
+				{name: response.data.data.results[19].name,
 					pic: response.data.data.results[19].thumbnail.path + '/portrait_small.' + response.data.data.results[19].thumbnail.extension,
 					flipped: false,},
-				{name: "Usopp",
+				{name:response.data.data.results[1].name,
 					pic: response.data.data.results[1].thumbnail.path + '/portrait_small.' + response.data.data.results[1].thumbnail.extension,
 					flipped: false,},
-				{name: "Zorro",
+				{name:response.data.data.results[4].name,
 					pic: response.data.data.results[4].thumbnail.path + '/portrait_small.' + response.data.data.results[4].thumbnail.extension,
 					flipped: false,},
-				{name: "Nami",
+				{name: response.data.data.results[6].name,
 					pic: response.data.data.results[6].thumbnail.path + '/portrait_small.' + response.data.data.results[6].thumbnail.extension,
 					flipped: false,},
-				{name: "Brooks",
+				{name: response.data.data.results[7].name,
 					pic: response.data.data.results[7].thumbnail.path + '/portrait_small.' + response.data.data.results[7].thumbnail.extension,
 					flipped: false,},
 			];
