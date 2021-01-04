@@ -4,7 +4,7 @@ import Game from "./Game";
 import Navbar from "./Navbar";
 import EndGame from "./EndGame";
 
-//Estrutura de código construído com base em tutorial
+
 class Main extends React.Component {
   state = {
     showLogin: true,

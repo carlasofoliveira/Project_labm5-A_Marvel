@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-//Estrutura de código construído com base em tutorial
+
 class Images extends React.Component {
 	constructor(props) {
 		super(props);

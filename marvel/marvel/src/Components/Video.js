@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/_video.css";
-//Estrutura de código construído com base em tutorial
+
 function selectVideo(videoIdObj, onVideoSelected) {
     onVideoSelected(videoIdObj.videoId);
 }

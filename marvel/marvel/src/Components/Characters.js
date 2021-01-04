@@ -60,7 +60,7 @@ class Charactersaccordion extends React.Component {
 
 		return (
 			<div className="App">
-				{apiresponse.data.data.results.map((res) => this.accordionStruct(res))}
+				{apiresponse.data.data.results.map((res) => this.accordionStruct(res))} //
 			</div>
 		);
 	}

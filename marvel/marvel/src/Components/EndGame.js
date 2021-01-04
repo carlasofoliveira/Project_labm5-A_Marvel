@@ -1,6 +1,6 @@
 import React from "react";
 import { messages } from "./messages";
-//Estrutura de código construído com base em tutorial
+
 class EndGame extends React.Component {
 	handleClick = () => {
 		this.props.newGame(false);
