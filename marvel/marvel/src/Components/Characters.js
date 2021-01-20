@@ -34,18 +34,18 @@ class Charactersaccordion extends React.Component {
 	accordionStruct(result) {
 		if (!result.thumbnail.path.includes('image_not_available')){
 			return (
-			<Accordion>
-				<AccordionSummary>
-					<div>{result.name}</div>
-				</AccordionSummary>
-				<AccordionSummary>
-					<img src={result.thumbnail.path + '/portrait_large.' + result.thumbnail.extension} />
-				</AccordionSummary>
+				<Accordion>
+					<AccordionSummary>
+						<div>{result.name}</div>
+					</AccordionSummary>
+					<AccordionSummary>
+						<img src={result.thumbnail.path + '/portrait_large.' + result.thumbnail.extension} />
+					</AccordionSummary>
 
-				<AccordionDetails>
-					{this.isDescriptionEmpty(result.description)}
-				</AccordionDetails>
-			</Accordion>
+					<AccordionDetails>
+						{this.isDescriptionEmpty(result.description)}
+					</AccordionDetails>
+				</Accordion>
 			)
 		}
 	}

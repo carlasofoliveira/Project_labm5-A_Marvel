@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+
+@carlasofoliveira
+carlasofoliveira
+/
+Project_labm5-A_Marvel
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Project_labm5-A_Marvel/marvel/marvel/src/style.css
+
+Carla Oliveira work
+Latest commit 2a93785 14 days ago
+History
+0 contributors
+55 lines (51 sloc)  878 Bytes
+
 html {
 	height: 100vh;
 	margin-left: 0%;
@@ -53,3 +84,15 @@ body,
 .form-controls label {
 	display: none;
 }
+
+.player-wrapper {
+	position: relative;
+	padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
