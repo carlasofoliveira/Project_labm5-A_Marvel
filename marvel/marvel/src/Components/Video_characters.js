@@ -3,37 +3,37 @@ import axios from "axios";
 import {Accordion, AccordionDetails, AccordionSummary} from "@material-ui/core";
 
 
-class charactersyoutube extends React.Component {
-	snippet;
+class video_youtube extends React.Component {
+// o estado inicial e de existir loading por falta de retorno de resposta da api
 	constructor(props) {
 		super(props);
 		this.state = {isLoading_video: true, apiresponse_video: undefined};
 	}
+// utiliza se axios para que exista uma promessa de resultado da api
+// apos a vinda de resultados e atualizado o estado
 	componentDidMount() {
 		console.debug("After mount! Let's load data from API...");
-		axios.get("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=Marvel-official&type=video&key=AIzaSyB49f04HJbUHZal32G-tfl_XiypcynqWfY").
+		axios.get("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=Marvel-official&type=video&key=AIzaSyC-bMkKOxMY7q6JSP5TkLvz7MB4evbgBPw").
 		then(response_video => {
 			this.setState({apiresponse_video: response_video});
 			this.setState({isLoading_video: false});
 		})
 	}
-
+// os videos sao mostrados atraves dos resultados que o parametro de entrada (result) e em conjunto com o caminho retirado do resultado da api
 	accordionStruct(result) {
 		return (
-			<Accordion width="420" height="315" >
-				<AccordionSummary>
-					<div>{result.snippet.title}</div>
-				</AccordionSummary>
-				<div>{result.snippet.description}</div>
-				<AccordionSummary>
+			<div width="420" height="315"  className='bg-white text-center container pt-2'>
+				<div className='text-center'>
+					<h1 className='text-danger text-center'>{result.snippet.title}</h1>
+				</div>
+
+				< div className='text-center'>
 					<iframe width="420" height="315"
 							src={"https://www.youtube.com/embed/"+result.id.videoId}>
 					</iframe>
-				</AccordionSummary>
-				<AccordionDetails>
-
-				</AccordionDetails>
-			</Accordion>
+				</div>
+				<p className='text-body pb-2'>{result.snippet.description}</p>
+			</div>
 		)
 	}
 
@@ -53,4 +53,4 @@ class charactersyoutube extends React.Component {
 	}
 }
 
-export default charactersyoutube;
+export default video_youtube;

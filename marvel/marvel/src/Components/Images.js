@@ -6,7 +6,8 @@ class Images extends React.Component {
 		super(props);
 		this.state = { isLoading: true, images: undefined };
 	}
-
+// o result tem os resultados
+// com a resposta do pedido da api (response) estruturam se os caminhos dos endpoints
 	componentDidMount() {
 		console.debug("After mount! Let's load data from API...");
 		axios.get("http://gateway.marvel.com/v1/public/characters?apikey=bd8a67a15563a7425a69aedc11c376e8").then(response => {
@@ -49,11 +50,12 @@ class Images extends React.Component {
 					pic: response.data.data.results[7].thumbnail.path + '/portrait_small.' + response.data.data.results[7].thumbnail.extension,
 					flipped: false,},
 			];
+// faz uma atualizacao do estado, depois de ter feito o pedido a api
 			this.setState({ images: images });
 			this.setState({ isLoading: false });
 		});
 	}
-
+// nesta estrutura abaixo faz parte da estrutura do jogo em que verifica se ha correspondencia entre duas imagens iguais se nao.
 	characters = [];
 	handleClick = (event) => {
 		let character = event.target;

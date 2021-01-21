@@ -1,3 +1,5 @@
+// estas sao as mensagens quando ganha
+
 export let messages = [
 	{ title: "Well Done", message: "How about another go?" },
 

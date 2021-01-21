@@ -4,7 +4,7 @@ import Game from "./Game";
 import Navbar from "./Navbar";
 import EndGame from "./EndGame";
 
-
+// inicialmente o estado incluindo a contagem de pontos é zero
 class Main extends React.Component {
   state = {
     showLogin: true,
@@ -12,7 +12,7 @@ class Main extends React.Component {
     name: "",
     score: 0,
   };
-
+//depois o estado que estava inicialmente é atualizado consoante a continuidade do jogo, os pontos aumentam, e aparecem mensagem de que ganhou
   handleLogin = (name, boolean) => {
     this.setState({ name: name, showLogin: boolean });
   };

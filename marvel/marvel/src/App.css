@@ -15,37 +15,38 @@ html {
 	margin-top: 2px;
 	padding: 0px;
 }
-nav div{
-	color:white;
 
-}
 nav ul {
-	color:white;
+
 	list-style: none;
 	display: flex;
+	text-align: right;
 	background-color: black;
 	margin-bottom: 20px;
 	margin-top: 0px;
 	padding-top: 0px;
-}
 
-nav ul li {
-color:white;
-	padding:0px;
 }
 
 nav ul li a {
-
+text-align: right;
 	color: white;
-	text-decoration: none;
-}
+	font-weight: bold ;
+	font-size: 30px;
 
+
+}
+li a:hover{
+color: firebrick;
+	text-decoration-color: firebrick;
+}
 .current {
 	border-bottom: 4px solid white;
 }
 
 h1 {
 	margin-bottom: 20px;
+	font-weight: bold ;
 }
 
 p {
@@ -53,6 +54,11 @@ p {
 	margin-bottom: 15px;
 }
 
-li{
-	font-size: 20px;
+.logo{
+	width: 200px;
+	height: auto;
+}
+
+.fundo{
+	background-color: firebrick;
 }

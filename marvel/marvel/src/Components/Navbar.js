@@ -1,5 +1,5 @@
 import React from "react";
-
+// menu de navegacao do proprio jogo
 class Navbar extends React.Component {
 	render() {
 		const { name, score } = this.props;

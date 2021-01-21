@@ -5,18 +5,18 @@ import {Link} from 'react-router-dom';
 import logo from "./Images/Marvel_Studios_logo.jpg"
 
 
-
 function Menunav() {
     return (
         <nav>
-            <ul>
-                <li><img src={logo} alt='marvel'/></li>
-				<li><Link to="/App">Home </Link> </li>
-                <li><Link to="/Main">Jogo de Memória </Link></li>
-                <li><Link  to="/Youtube_menu">Search Youtube </Link></li>
-				<li><Link  to="/Characters">Characters </Link></li>
-				<li><Link  to="/Video_characters">Video Characters </Link></li>
-            </ul>
+
+                <ul>
+                    <div className="text-left"><img className="logo" src={logo} alt='marvel'/></div>
+                    <li  className='vermelho col-5 pt-4'><Link to="/Home">Home</Link></li>
+                    <li className=" pt-4"><Link to="/Main">Marvel Memory Game </Link></li>
+                    <li className=" pt-4"><Link to="/Characters">Characters </Link></li>
+                    <li className=" pt-4"><Link to="/Video_characters">Trailers </Link></li>
+                </ul>
+
         </nav>
     );
 }

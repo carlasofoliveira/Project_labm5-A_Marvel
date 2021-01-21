@@ -11,8 +11,8 @@ class EndGame extends React.Component {
 			<div className="end-game">
 				<div className="message">
 					<h2>{messages[0].title}</h2>
-					<p>{messages[0].message}</p>
-					<button className="btn btn-primary" onClick={this.handleClick}>
+					<p className='text-dark'>{messages[0].message}</p>
+					<button className="btn btn-danger" onClick={this.handleClick}>
 						Go Again
 					</button>
 				</div>
